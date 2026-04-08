@@ -2,6 +2,10 @@
 
 > **Class Project · Educational Use Only · Not Financial Advice**
 
+## 📚 Key Project Documentation
+- **[👉 View Full DRIVER Documentation (Methodology & Details)](./DRIVER_documentation.md)**
+- **[👉 View AI & Educational Disclosure](./AI_Disclosure.md)**
+
 A full-stack stock sentiment analysis web app built with Next.js 14, TypeScript, Recharts, and a rule-based NLP sentiment engine. It retrieves recent news articles about user-specified stock tickers, scores the sentiment of each item, displays trends over selectable time windows, and outputs a simple Bullish / Neutral / Bearish signal — always with a prominent educational disclaimer.
 
 ---
