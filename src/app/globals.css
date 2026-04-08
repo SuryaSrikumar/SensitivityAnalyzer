@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0f0f14;
+  --ink-soft: #1a1a24;
+  --ink-muted: #2a2a38;
+  --border: #2e2e42;
+  --text-primary: #e8e8f0;
+  --text-secondary: #8888aa;
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+  --bull: #22c55e;
+  --bear: #ef4444;
+  --neutral-signal: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--ink);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--ink);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--ink-soft); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* Glow utility */
+.accent-glow {
+  box-shadow: 0 0 24px var(--accent-glow), 0 0 0 1px rgba(99,102,241,0.3);
+}
+
+/* Grid background */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Card */
+.card {
+  background: var(--ink-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+/* Animate in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.4s ease both;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Ticker badge */
+.ticker-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: #a5b4fc;
+}
+
+/* Signal colors */
+.signal-bull { color: var(--bull); }
+.signal-bear { color: var(--bear); }
+.signal-neutral { color: var(--neutral-signal); }
+
+.bg-signal-bull { background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.3); }
+.bg-signal-bear { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3); }
+.bg-signal-neutral { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); }
+
+/* Demo badge */
+.demo-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(245,158,11,0.15);
+  border: 1px solid rgba(245,158,11,0.35);
+  color: #fbbf24;
+}
+
+.live-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.3);
+  color: #4ade80;
+}
