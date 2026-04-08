@@ -1,3 +1,5 @@
+Youtube Link- https://youtu.be/mnJJiGt9V-A
+Substack Link- https://open.substack.com/pub/suryasrikumar/p/sensitivity-analyzer?r=2htl3i&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
 # SentimentIQ — Stock Sentiment Analyzer
 
 > **Class Project · Educational Use Only · Not Financial Advice**
